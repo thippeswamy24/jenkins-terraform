@@ -19,7 +19,7 @@ pipeline {
         }
         stage('terraform init') {
             steps {
-                sh 'sudo /home/ec2-user/terraform init ./jenkins'
+                sh 'cd /var/lib/jenkins/workspace/dem && terraform init'
             }
         }
         stage('terraform plan') {

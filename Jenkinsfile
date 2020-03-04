@@ -14,12 +14,7 @@ pipeline {
         }
         stage('git clone') {
             steps {
-                sh 'rm -r *;git clone https://github.com/thippeswamy24/jenkins-terraform.git'
-            }
-        }
-        stage('tfsvars create') {
-            steps {
-                sh 'cp /home/ec2-user/vars.tf ./jenkins/'
+                sh 'sudo rm -r *;sudo git clone https://github.com/thippeswamy24/jenkins-terraform.git'
             }
         }
         stage('terraform init') {

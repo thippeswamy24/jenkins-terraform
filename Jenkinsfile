@@ -19,7 +19,7 @@ pipeline {
         }
         stage('terraform init') {
             steps {
-                sh 'mv /usr/local/bin/terraform . ; terraform init'
+                sh 'terraform init'
             }
         }
         stage('terraform plan') {

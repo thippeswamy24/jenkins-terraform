@@ -14,7 +14,7 @@ pipeline {
         }
         stage('git clone') {
             steps {
-                sh 'rm -rf *;git clone https://github.com/thippeswamy24/jenkins-terraform.git'
+                sh 'sudo rm -rf *;git clone https://github.com/thippeswamy24/jenkins-terraform.git'
             }
         }
         stage('terraform init') {

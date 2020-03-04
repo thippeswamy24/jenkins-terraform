@@ -14,7 +14,7 @@ pipeline {
         }
         stage('git clone') {
             steps {
-                sh 'sudo su -;mkdir terraform;cd terraform'
+                sh 'mkdir terraform;cd terraform'
                 sh 'rm -r *;git clone https://github.com/thippeswamy24/jenkins-terraform.git'
             }
         }

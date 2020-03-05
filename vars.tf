@@ -3,10 +3,10 @@
 
 variable "access_key" {
     description = "Your AWS Access Key"
-    default = "AKIAUPSEJXY56X6HHBYU"
+    default = ""
 }
 
 variable "secret_key" {
     description = "Your AWS Secret Key"
-    default = "hFK+cERm+VcWTGz2IK/h5gJteKKGATy9Eq8d76Ed"
+    default = ""
 }

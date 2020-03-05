@@ -12,11 +12,9 @@ pipeline {
                 sh 'echo "Started...!" '
             }
         }
-        stage('git clone') {
-            steps {
-                sh 'rm -rf *;cd /home/ec2-user && mkdir jen && cd jen ; git clone https://github.com/thippeswamy24/jenkins-terraform.git'
-            }
-        }
+       dir('cd /opt/') {
+    // some block
+}
         stage('terraform init') {
             steps {
                 sh 'cd /var/lib/jenkins/workspace/dem/jenkins-terraform; terraform init'

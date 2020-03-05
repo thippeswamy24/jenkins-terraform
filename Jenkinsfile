@@ -13,7 +13,7 @@ pipeline {
             }
         }
        dir('cd /opt/') {
-    // some block
+    sh 'git clone https://github.com/thippeswamy24/jenkins-terraform.git'
 }
         stage('terraform init') {
             steps {

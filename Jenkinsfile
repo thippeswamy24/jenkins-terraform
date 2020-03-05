@@ -12,9 +12,13 @@ pipeline {
                 sh 'echo "Started...!" '
             }
         }
-       dir('cd /opt/') {
+      stage('terraform started') {
+            steps {
+                dir('cd /opt/') {
     sh 'git clone https://github.com/thippeswamy24/jenkins-terraform.git'
 }
+            }
+        }
         stage('terraform init') {
             steps {
                 sh 'cd /var/lib/jenkins/workspace/dem/jenkins-terraform; terraform init'

@@ -14,7 +14,8 @@ pipeline {
         }
         stage('git clone') {
             steps {
-                sh 'sudo rm -r *;sudo git clone https://github.com/thippeswamy24/jenkins-terraform.git /home/ec2-user/newfolder'
+                sh 'sudo rm -rf /home/ec2-user/newfolder/*'
+                sh 'sudo rm -rf *;sudo git clone https://github.com/thippeswamy24/jenkins-terraform.git /home/ec2-user/newfolder'
             }
         }
         stage('tfsvars create') {

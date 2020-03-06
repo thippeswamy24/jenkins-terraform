@@ -32,6 +32,11 @@ pipeline {
                 sh 'ls /var/lib/jenkins/workspace/final/; sudo /home/ec2-user/terraform plan /var/lib/jenkins/workspace/final/'
             }
         }
+        stage('terraform apply') {
+            steps {
+                sh 'sudo /home/ec2-user/terraform apply /var/lib/jenkins/workspace/final/'
+            }
+        }
         stage('terraform ended') {
             steps {
                 sh 'echo "Ended....!!"'

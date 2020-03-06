@@ -19,7 +19,7 @@ pipeline {
         }
         stage('tfsvars create') {
             steps {
-                sh 'cp -rf /home/ec2-user/vars.tf ./jenkins/'
+                sh 'sudo cp -rf /home/ec2-user/vars.tf ./jenkins/'
             }
         }
         stage('terraform init') {

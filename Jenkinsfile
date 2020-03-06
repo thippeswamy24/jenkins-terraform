@@ -19,22 +19,22 @@ pipeline {
         }
         stage('tfsvars create') {
             steps {
-                sh 'sudo cp -rf /home/ec2-user/vars.tf /var/lib/jenkins/workspace/final/'
+                sh 'sudo cp -rf /home/ec2-user/vars.tf /home/ec2-user/newfolder'
             }
         }
         stage('terraform init') {
             steps {
-                sh 'sudo /home/ec2-user/terraform init /var/lib/jenkins/workspace/final/'
+                sh 'sudo /home/ec2-user/terraform init /home/ec2-user/newfolder'
             }
         }
         stage('terraform plan') {
             steps {
-                sh 'ls /var/lib/jenkins/workspace/final/; sudo /home/ec2-user/terraform plan /var/lib/jenkins/workspace/final/'
+                sh 'ls /home/ec2-user/newfolder; sudo /home/ec2-user/terraform plan /home/ec2-user/newfolder'
             }
         }
         stage('terraform apply') {
             steps {
-                sh 'sudo /home/ec2-user/terraform apply /var/lib/jenkins/workspace/final/'
+                sh 'sudo /home/ec2-user/terraform apply /home/ec2-user/newfolder'
             }
         }
         stage('terraform ended') {

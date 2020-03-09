@@ -25,7 +25,7 @@ pipeline {
         }
         stage('terraform init') {
             steps {
-                sh 'terraform init /home/ec2-user/newfolder'
+                sh 'sudo /root/terraform init /home/ec2-user/newfolder'
             }
         }
         stage('terraform plan') {

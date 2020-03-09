@@ -30,7 +30,7 @@ pipeline {
         }
         stage('terraform plan') {
             steps {
-                sh 'ls /home/ec2-user/newfolder; sudo /home/ec2-user/terraform plan /home/ec2-user/newfolder'
+                sh 'sudo ls /home/ec2-user/newfolder; sudo /home/ec2-user/terraform plan /home/ec2-user/newfolder'
             }
         }
         stage('terraform apply') {
